@@ -8,13 +8,14 @@
 
 ## **Funcionalidades Principais** - a ser implementado
 
-- [] **Cadastro de Usuários**: Permite o registro e autenticação de usuários.
-- [] **Criação de Pacotes de Viagem**: Os usuários podem personalizar pacotes de viagem escolhendo destinos, transportes e hospedagens.
-- [] **Gerenciamento de Reservas**: Função para adicionar, editar ou cancelar reservas de viagem.
-- [] **Avaliação de Serviços**: Os usuários podem avaliar destinos, hospedagens e transportes utilizados em suas viagens.
-- [] **Pagamentos**: Integração com métodos de pagamento para finalizar as reservas.
-- [] **Visualização de Itinerários**: Permite aos usuários visualizar e gerenciar seus itinerários de viagem.
-- [] **Administração**: Módulo para gerenciamento de conteúdo e moderação das avaliações de usuários.
+- [ ] **Cadastro de Usuários**: Permite o registro e autenticação de usuários.
+
+- [ ] **Criação de Pacotes de Viagem**: Os usuários podem personalizar pacotes de viagem escolhendo destinos, transportes e hospedagens.
+- [ ] **Gerenciamento de Reservas**: Função para adicionar, editar ou cancelar reservas de viagem.
+- [ ] **Avaliação de Serviços**: Os usuários podem avaliar destinos, hospedagens e transportes utilizados em suas viagens.
+- [ ] **Pagamentos**: Integração com métodos de pagamento para finalizar as reservas.
+- [ ] **Visualização de Itinerários**: Permite aos usuários visualizar e gerenciar seus itinerários de viagem.
+- [ ] **Administração**: Módulo para gerenciamento de conteúdo e moderação das avaliações de usuários.
 
 ## **Tecnologias Utilizadas** - proposta
 
