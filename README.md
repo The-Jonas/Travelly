@@ -8,27 +8,55 @@
 
 ## **Funcionalidades Principais** - a ser implementado
 
-- [ ] **Cadastro de Usuários**: Permite o registro e autenticação de usuários.
+**Cadastro de Usuários**: Permite o registro e autenticação de usuários.
 
-- [ ] **Criação de Pacotes de Viagem**: Os usuários podem personalizar pacotes de viagem escolhendo destinos, transportes e hospedagens.
-- [ ] **Gerenciamento de Reservas**: Função para adicionar, editar ou cancelar reservas de viagem.
-- [ ] **Avaliação de Serviços**: Os usuários podem avaliar destinos, hospedagens e transportes utilizados em suas viagens.
-- [ ] **Pagamentos**: Integração com métodos de pagamento para finalizar as reservas.
-- [ ] **Visualização de Itinerários**: Permite aos usuários visualizar e gerenciar seus itinerários de viagem.
-- [ ] **Administração**: Módulo para gerenciamento de conteúdo e moderação das avaliações de usuários.
+- [ ] Backend
+- [ ] Frontend
+
+**Criação de Pacotes de Viagem**: Os usuários podem personalizar pacotes de viagem escolhendo destinos, transportes e hospedagens.
+
+- [ ] Backend
+- [ ] Frontend
+
+**Gerenciamento de Reservas**: Função para adicionar, editar ou cancelar reservas de viagem.
+
+- [ ] Backend
+- [ ] Frontend
+      **Avaliação de Serviços**: Os usuários podem avaliar destinos, hospedagens e transportes utilizados em suas viagens.
+- [ ] Backend
+- [ ] Frontend
+      **Pagamentos**: Integração com métodos de pagamento para finalizar as reservas.
+- [ ] Backend
+- [ ] Frontend
+      **Visualização de Itinerários**: Permite aos usuários visualizar e gerenciar seus itinerários de viagem.
+- [ ] Backend
+- [ ] Frontend
+      **Administração**: Módulo para gerenciamento de conteúdo e moderação das avaliações de usuários.
+- [ ] Backend
+- [ ] Frontend
 
 ## **Tecnologias Utilizadas** - proposta
 
 - **Backend**:
   - **Linguagem**: TypeScript
-  - **Framework**: Node.js com Express
+  - **Framework**: Node.js com Express (Next.js talvez)
   - **ORM**: TypeORM para integração com PostgreSQL ou apenas o driver do Postgres (sem orm)
 - **Banco de Dados**:
   - **SGBD**: PostgreSQL
   - **Modelagem**: BRModelo
 - **Autenticação**: JWT (JSON Web Token)
 - **Infraestrutura**:
+
   - **Docker**: Contêineres para facilitar o desenvolvimento e a implantação.
+
+- **Frontend**:
+  - styled-components
+  - axios
+  - react-icons
+  - react-toastify
+  - react-router-dom
+  - Bootstrap
+  - next.js
 
 ## **Modelagem de Dados**
 
