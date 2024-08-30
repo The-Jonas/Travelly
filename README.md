@@ -22,16 +22,23 @@
 
 - [ ] Backend
 - [ ] Frontend
-      **Avaliação de Serviços**: Os usuários podem avaliar destinos, hospedagens e transportes utilizados em suas viagens.
+
+**Avaliação de Serviços**: Os usuários podem avaliar destinos, hospedagens e transportes utilizados em suas viagens.
+
 - [ ] Backend
 - [ ] Frontend
-      **Pagamentos**: Integração com métodos de pagamento para finalizar as reservas.
+      
+**Pagamentos**: Integração com métodos de pagamento para finalizar as reservas.
+
 - [ ] Backend
 - [ ] Frontend
-      **Visualização de Itinerários**: Permite aos usuários visualizar e gerenciar seus itinerários de viagem.
+      
+**Visualização de Itinerários**: Permite aos usuários visualizar e gerenciar seus itinerários de viagem.
+
 - [ ] Backend
 - [ ] Frontend
-      **Administração**: Módulo para gerenciamento de conteúdo e moderação das avaliações de usuários.
+      
+**Administração**: Módulo para gerenciamento de conteúdo e moderação das avaliações de usuários.
 - [ ] Backend
 - [ ] Frontend
 
