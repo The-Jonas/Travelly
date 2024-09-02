@@ -29,10 +29,10 @@
   - [ ] Desenvolver 5 consultas, cada uma envolvendo pelo menos 3 tabelas.
   - [ ] Documentar as consultas e explicar os resultados.
 
-- [ ] **Avaliação das Formas Normais**
+- [x] **Avaliação das Formas Normais**
 
-  - [ ] Analisar 5 tabelas para verificar as formas normais.
-  - [ ] Documentar o processo e os resultados da avaliação.
+  - [x] Analisar 5 tabelas para verificar as formas normais.
+  - [x] Documentar o processo e os resultados da avaliação.
 
 - [ ] **Script SQL**
 
