@@ -69,7 +69,7 @@
 Cadastro de novos usuários com informações pessoais e credenciais de login:
 
 - [ ] backend
-- [ ] frontend
+- [x] frontend
 
 Criação e edição de pacotes turísticos:
 
