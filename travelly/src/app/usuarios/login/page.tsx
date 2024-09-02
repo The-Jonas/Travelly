@@ -6,8 +6,8 @@ import { useState } from "react";
 
 export default function FormUsuarios() {
 
-  const [email, setEmail] = useState<string>();
-  const [senha, setSenha] = useState<string>();
+  const [email, setEmail] = useState<string>('');
+  const [senha, setSenha] = useState<string>('');
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -15,9 +15,9 @@ export default function FormUsuarios() {
   }
 
   return (
-    <>
+    <div>
       <main className={styles.centered_container}>
-        <h2 className={styles.centeredTitle}>Entre em sua conta</h2>
+        <h2 className={styles.titleCustom}>Entre em sua conta</h2>
         <form onSubmit={handleSubmit}>
           <fieldset>
             <label>
@@ -29,10 +29,13 @@ export default function FormUsuarios() {
               <input className={styles.inputField} type="password" value={senha} onChange={(evt) => setSenha(evt.target.value)} />
             </label>
           </fieldset>
-          <button type="submit">Entrar</button> 
-          <Link href='/usuarios/cadastro'>Ainda não possui conta?</Link>
+          <button type="submit">Entrar</button>
+          <label>
+            Ainda não possui conta?&nbsp; 
+            <Link href='/usuarios/cadastro'>Registra-se</Link>
+          </label> 
         </form>
       </main >
-    </>
+    </div>
   )
 }

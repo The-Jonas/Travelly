@@ -6,13 +6,21 @@
     min-height: 100vh; 
   }
 
-  .centeredTitle {
+  .titleCustom {
     text-align: center;
   }
 
   .inputField, .buttonField {
-    width: 100%; /* Faz com que os elementos ocupem toda a largura disponível do contêiner pai */
-    box-sizing: border-box; /* Inclui padding e bordas na largura total */
-    padding: 10px; /* Adiciona algum espaço interno */
-    margin-top: 10px; /* Adiciona espaço acima dos elementos */
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 10px; 
+    margin-top: 10px; 
   }
+
+  .error{
+    color: red;
+    font-size: 0.7em;
+    margin-top: 0.05em;
+    display: block;
+  }
+
