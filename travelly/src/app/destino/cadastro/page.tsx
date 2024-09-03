@@ -13,7 +13,7 @@ export default function CadastroDestino() {
   const [pacote, setPacote] = useState<any>(); // TODO: criar pacoteTuristico
 
   const handleSubmit = (event: React.FormEvent) => {
-
+  event.preventDefault();
   }
 
   const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
