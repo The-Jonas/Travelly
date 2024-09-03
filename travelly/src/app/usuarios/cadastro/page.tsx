@@ -58,21 +58,24 @@ export default function FormUsuarios() {
           <fieldset>
             <label>
               Nome:
-              <input className={styles.inputField} type="text" value={nome} onChange={(evt) => setNome(evt.target.value)} /> {nomeErro && <span className={styles.error}>{nomeErro}</span>}
+              <input className={styles.inputField} type="text" value={nome} onChange={(evt) => setNome(evt.target.value)} />
+              {nomeErro && <small className={styles.error}>{nomeErro}</small>}
             </label>
             <label>
               E-mail:
-              <input className={styles.inputField} type="email" value={email} onChange={(evt) => setEmail(evt.target.value)} /> {emailErro && <span className={styles.error}>{emailErro}</span>}
+              <input className={styles.inputField} type="email" value={email} onChange={(evt) => setEmail(evt.target.value)} />
+              {emailErro && <small className={styles.error}>{emailErro}</small>}
             </label>
             <label>
               Senha:
-              <input className={styles.inputField} type="password" value={senha} onChange={(evt) => setSenha(evt.target.value)} /> {senhaErro && <span className={styles.error}>{senhaErro}</span>}
+              <input className={styles.inputField} type="password" value={senha} onChange={(evt) => setSenha(evt.target.value)} />
+              {senhaErro && <small className={styles.error}>{senhaErro}</small>}
             </label>
           </fieldset>
           <button type="submit">Cadastrar</button>
           <Link href='/usuarios/login'>Já possui conta?</Link>
         </form>
-      </main >z
+      </main >
     </div>
   )
 }

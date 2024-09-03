@@ -31,9 +31,9 @@ export default function FormUsuarios() {
           </fieldset>
           <button type="submit">Entrar</button>
           <label>
-            Ainda não possui conta?&nbsp; 
-            <Link href='/usuarios/cadastro'>Registra-se</Link>
-          </label> 
+            Ainda não possui conta?&nbsp;
+            <Link href='/usuarios/cadastro'>Registre-se</Link>
+          </label>
         </form>
       </main >
     </div>
