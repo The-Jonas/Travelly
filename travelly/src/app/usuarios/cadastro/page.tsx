@@ -37,6 +37,9 @@ export default function FormUsuarios() {
     if (senha.trim() === '') {
       setSenhaErro('A senha é obrigatória.');
       formValido = false;
+    } else if (senha.trim().length < 6) {
+      setSenhaErro('A senha deve ter no mínimo 6 caracteres.');
+      formValido = false;
     } else {
       setSenhaErro(null);
     }
