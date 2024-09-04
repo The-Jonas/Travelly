@@ -24,20 +24,19 @@
   - [x] Criar o Modelo Relacional.
   - [x] Usar uma ferramenta de modelagem (BRModelo).
 
-- [ ] **Consultas em Álgebra Relacional**
+- [x] **Consultas em Álgebra Relacional**
 
-  - [ ] Desenvolver 5 consultas, cada uma envolvendo pelo menos 3 tabelas.
-  - [ ] Documentar as consultas e explicar os resultados.
+  - [x] Desenvolver 5 consultas, cada uma envolvendo pelo menos 3 tabelas.
 
 - [x] **Avaliação das Formas Normais**
 
   - [x] Analisar 5 tabelas para verificar as formas normais.
-  - [x] Documentar o processo e os resultados da avaliação.
+  - [x] Documentar a avaliação.
 
-- [ ] **Script SQL**
+- [x] **Script SQL**
 
-  - [ ] Criar o script SQL que gera o banco de dados.
-  - [ ] Garantir que o script esteja livre de erros e consistente com o MR.
+  - [x] Criar o script SQL que gera o banco de dados.
+  - [x] Garantir que o script esteja livre de erros e consistente com o MR.
 
 - [ ] **Camada de Persistência**
 
