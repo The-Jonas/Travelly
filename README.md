@@ -41,7 +41,6 @@
 - [ ] **Camada de Persistência**
 
   - [ ] Desenvolver a camada de persistência em TypeScript.
-  - [ ] Enviar o link do GitHub com o código-fonte.
   - [ ] Criar um diagrama mostrando como a interface gráfica acessa a camada de persistência.
 
 - [ ] **CRUD (Create, Read, Update, Delete)**
@@ -60,32 +59,12 @@
   - [ ] Documentar a complexidade e a lógica da procedure.
 
 - [ ] **Inserção de Dado Binário**
-  - [ ] Adicionar um dado binário no banco de dados (ex: foto, arquivo PDF).
+  - [x] Adicionar um dado binário no banco de dados (ex: foto, arquivo PDF).
   - [ ] Garantir que o dado binário seja corretamente inserido e recuperado.
 
-## **Funcionalidades Principais** - a ser implementado
+## **Funcionalidades Principais**
 
 Cadastro de novos usuários com informações pessoais e credenciais de login:
-
-- [ ] backend
-- [ ] frontend
-
-Criação e edição de pacotes turísticos:
-
-- [ ] backend
-- [ ] frontend
-
-Reserva de pacotes e gestão dos detalhes da viagem:
-
-- [ ] backend
-- [ ] frontend
-
-Registro e gerenciamento de pagamentos das reservas:
-
-- [ ] backend
-- [ ] frontend
-
-Sistema de avaliação para que os usuários possam deixar feedback sobre destinos e pacotes turísticos:
 
 - [ ] backend
 - [ ] frontend
@@ -95,12 +74,12 @@ Consultas básicas das reservas e avaliações:
 - [ ] backend
 - [ ] frontend
 
-## **Tecnologias Utilizadas** - proposta
+## **Tecnologias Utilizadas**
 
 - **Backend**:
   - **Linguagem**: TypeScript
   - **Framework**: Node.js com Express (Next.js talvez)
-  - **ORM**: TypeORM para integração com PostgreSQL ou apenas o driver do Postgres (sem orm)
+  - **ORM**: Driver do Postgres (sem orm)
 - **Banco de Dados**:
   - **SGBD**: PostgreSQL
   - **Modelagem**: BRModelo
