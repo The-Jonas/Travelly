@@ -1,4 +1,4 @@
-import { Usuario } from "../../domain/entities/Usuario";
+import { Usuario } from "../../domain/interfaces/IUsuarioRepository";
 import { IUsuarioRepository } from "../../domain/interfaces/IUsuarioRepository";
 
 export class CriarUsuario {

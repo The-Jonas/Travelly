@@ -1,4 +1,10 @@
-import { Usuario } from "../entities/Usuario";
+export interface Usuario {
+  id?: string; // UUID
+  nome: string;
+  email: string;
+  senha: string;
+  data_criacao?: Date;
+}
 
 export interface IUsuarioRepository {
   create(usuario: Usuario): Promise<Usuario>;

@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { CriarUsuario } from "../../use-cases/usuario/CriarUsuario";
 import { AtualizarUsuario } from "../../use-cases/usuario/AtualizarUsuario";
 import { UsuarioRepository } from "../../database/repositories/UsuarioRepository";
-import { Usuario } from "../../domain/entities/Usuario";
+import { Usuario } from "../../domain/interfaces/IUsuarioRepository";
 import { DeletarUsuario } from "../../use-cases/usuario/DeletarUsuario";
 import { BuscarUsuarioUnico } from "../../use-cases/usuario/BuscarUsuarioUnico";
 

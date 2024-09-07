@@ -1,5 +1,5 @@
 import { IUsuarioRepository } from "../../domain/interfaces/IUsuarioRepository";
-import { Usuario } from "../../domain/entities/Usuario";
+import { Usuario } from "../../domain/interfaces/IUsuarioRepository";
 import { dbConnection } from "../db";
 import { v4 as uuidv4 } from "uuid";
 
