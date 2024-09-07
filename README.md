@@ -41,7 +41,7 @@
 - [ ] **Camada de Persistência**
 
   - [ ] Desenvolver a camada de persistência em TypeScript.
-  - [ ] Criar um diagrama mostrando como a interface gráfica acessa a camada de persistência.
+  - [x] Criar um diagrama mostrando como a interface gráfica acessa a camada de persistência.
 
 - [ ] **CRUD (Create, Read, Update, Delete)**
 
