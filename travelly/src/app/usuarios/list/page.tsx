@@ -3,8 +3,7 @@ import { MdEdit } from '@react-icons/all-files/md/MdEdit';
 import { MdDelete } from '@react-icons/all-files/md/MdDelete';
 import { useEffect, useState } from 'react';
 
-const SERVER = "http://localhost";
-const PORT = 8664;
+const SERVER = "http://localhost:8664";
 const USERS_PATH = "/api/usuario/getAll";
 
 type Usuario = {
@@ -22,7 +21,7 @@ export default function ListaUsuarios() {
   useEffect(() => {
     const fetchUsuarios = async () => {
       try {
-        const apiUrl = `${SERVER}:${PORT}${USERS_PATH}`;
+        const apiUrl = `${SERVER}${USERS_PATH}`;
 
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -35,7 +34,7 @@ export default function ListaUsuarios() {
 
         setUsuarios(usuarios);
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error("Erro ao recuperar lista de usuarios:", error);
       }
     };
 

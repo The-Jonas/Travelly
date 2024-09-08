@@ -3,6 +3,9 @@ import Link from 'next/link';
 import styles from '../../../styles/Cadastro.module.css';
 import { useState } from "react";
 
+const SERVER = "http://localhost:8664";
+const USERS_PATH = "/api/usuario/create";
+
 export default function FormUsuarios() {
   const [nome, setNome] = useState<string>('');
   const [email, setEmail] = useState<string>('');
@@ -12,7 +15,7 @@ export default function FormUsuarios() {
   const [emailErro, setEmailErro] = useState<string | null>(null);
   const [senhaErro, setSenhaErro] = useState<string | null>(null);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     let formValido = true;
@@ -45,8 +48,26 @@ export default function FormUsuarios() {
     }
 
     if (formValido) {
-      console.log(nome, email, senha);
-      // Aqui você pode enviar os dados do formulário para uma API, etc.
+      try {
+        const apiUrl = `${SERVER}${USERS_PATH}`;
+
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({nome, email, senha})
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+        } else {
+          throw new Error();
+        }
+
+      } catch (error) {
+        console.error("Erro ao criar usuario:", error);
+      }
     }
   }
 
