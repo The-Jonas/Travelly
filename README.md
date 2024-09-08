@@ -78,9 +78,7 @@ Consultas básicas de avaliações, usuários e destinos:
 - **Banco de Dados**:
   - **SGBD**: PostgreSQL
   - **Modelagem**: BRModelo
-- **Autenticação**: JWT (JSON Web Token)
 - **Infraestrutura**:
-
   - **Docker**: Contêineres para facilitar o desenvolvimento e a implantação.
 
 - **Frontend**:
