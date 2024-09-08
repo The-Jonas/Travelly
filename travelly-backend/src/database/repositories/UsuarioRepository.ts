@@ -40,6 +40,6 @@ export class UsuarioRepository implements IUsuarioRepository {
 
   async getAll(): Promise<Usuario[]> {
     const result = await dbConnection.query("SELECT * FROM Usuario");
-    return result.rows;
+    return result.rows || null;
   }
 }
