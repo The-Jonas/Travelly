@@ -38,15 +38,15 @@
   - [x] Criar o script SQL que gera o banco de dados.
   - [x] Garantir que o script esteja livre de erros e consistente com o MR.
 
-- [ ] **Camada de Persistência**
+- [x] **Camada de Persistência**
 
-  - [ ] Desenvolver a camada de persistência em TypeScript.
+  - [x] Desenvolver a camada de persistência em TypeScript.
   - [x] Criar um diagrama mostrando como a interface gráfica acessa a camada de persistência.
 
-- [ ] **CRUD (Create, Read, Update, Delete)**
+- [x] **CRUD (Create, Read, Update, Delete)**
 
-  - [ ] Implementar funções de CRUD para um conjunto de no mínimo 3 tabelas com relacionamento entre elas.
-  - [ ] Testar as funções para garantir o funcionamento correto.
+  - [x] Implementar funções de CRUD para um conjunto de no mínimo 3 tabelas com relacionamento entre elas.
+  - [x] Testar as funções para garantir o funcionamento correto.
 
 - [ ] **Utilização de View**
 
@@ -64,14 +64,9 @@
 
 ## **Funcionalidades Principais**
 
-Cadastro de novos usuários com informações pessoais e credenciais de login:
+Consultas básicas de avaliações, usuários e destinos:
 
-- [ ] backend
-- [ ] frontend
-
-Consultas básicas das reservas e avaliações:
-
-- [ ] backend
+- [x] backend
 - [ ] frontend
 
 ## **Tecnologias Utilizadas**
