@@ -1,0 +1,9 @@
+
+.imagemDestino {
+  aspect-ratio: calc(16/9);
+  width: 100%;
+}
+
+.desc {
+  font-size: 0.8rem;
+}

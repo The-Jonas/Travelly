@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import { ChangeEvent, useState } from "react"
 
 export default function CadastroDestino() {
@@ -13,7 +12,7 @@ export default function CadastroDestino() {
   const [pacote, setPacote] = useState<any>(); // TODO: criar pacoteTuristico
 
   const handleSubmit = (event: React.FormEvent) => {
-  event.preventDefault();
+    event.preventDefault();
   }
 
   const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
