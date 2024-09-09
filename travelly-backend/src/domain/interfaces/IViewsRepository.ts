@@ -8,7 +8,7 @@ export interface AvaliacoesCompleto {
   destino_nome?: string;
   destino_pais?: string;
   destino_descricao?: string;
-  nota: Number;
+  nota: number;
   comentario: string;
   data_avaliacao: Date;
 }
