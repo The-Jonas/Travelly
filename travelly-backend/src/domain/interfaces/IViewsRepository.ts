@@ -15,4 +15,5 @@ export interface AvaliacoesCompleto {
 
 export interface IViewsRepository {
   getAllRatings(): Promise<AvaliacoesCompleto[]>;
+  getRatingById(id: string): Promise<AvaliacoesCompleto>;
 }

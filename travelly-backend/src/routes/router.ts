@@ -60,7 +60,8 @@ router.patch("/avaliacao/update", AvaliacaoController.updateAvaliacao);
 router.delete("/avaliacao/delete", AvaliacaoController.deleteAvaliacao);
 
 //! rotas para views
-router.get("/views/get-ratings-info", ViewsController.getRatingsInfo);
+router.get("/views/get-ratings-info", ViewsController.getAllRatingsInfo);
+router.get("/views/get/:id", ViewsController.getRatingInfo);
 
 //! rotas para pacotes_turisticos
 router.get("/views/get-destiny-packs/:id", PacoteController.getPackageInfo);
