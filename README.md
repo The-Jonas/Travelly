@@ -58,16 +58,16 @@
   - [x] Criar pelo menos uma procedure com comandos condicionais.
   - [x] Documentar a complexidade e a lógica da procedure.
 
-- [ ] **Inserção de Dado Binário**
+- [x] **Inserção de Dado Binário**
   - [x] Adicionar um dado binário no banco de dados (ex: foto, arquivo PDF).
-  - [ ] Garantir que o dado binário seja corretamente inserido e recuperado.
+  - [x] Garantir que o dado binário seja corretamente inserido e recuperado.
 
 ## **Funcionalidades Principais**
 
 Consultas básicas de avaliações, usuários e destinos:
 
 - [x] backend
-- [ ] frontend
+- [x] frontend
 
 ## **Tecnologias Utilizadas**
 
