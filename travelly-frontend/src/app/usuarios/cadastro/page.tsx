@@ -2,6 +2,8 @@
 import Link from 'next/link';
 import styles from '../../../styles/Cadastro.module.css';
 import { useState } from "react";
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 export default function FormUsuarios() {
   const [nome, setNome] = useState<string>('');
@@ -11,6 +13,8 @@ export default function FormUsuarios() {
   const [nomeErro, setNomeErro] = useState<string | null>(null);
   const [emailErro, setEmailErro] = useState<string | null>(null);
   const [senhaErro, setSenhaErro] = useState<string | null>(null);
+
+  const router = useRouter();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -45,8 +49,17 @@ export default function FormUsuarios() {
     }
 
     if (formValido) {
-      console.log(nome, email, senha);
-      // Aqui você pode enviar os dados do formulário para uma API, etc.
+      axios.post<{ nome: string, email: string, senha: string }, void>(`http://localhost:8664/api/usuario/create`, {
+        nome,
+        email,
+        senha
+      })
+        .then(() => {
+          router.push("/usuarios/login");
+        })
+        .catch(() => {
+          setEmailErro("Email inválido!");
+        });
     }
   }
 

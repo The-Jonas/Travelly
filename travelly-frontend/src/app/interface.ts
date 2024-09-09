@@ -1,4 +1,4 @@
-export type Avaliacao = {
+export interface Avaliacao {
   id: string;
   usuario_id: string;
   destino_id: string;
@@ -7,16 +7,16 @@ export type Avaliacao = {
   data_avaliacao: Date;
 };
 
-export type AvaliacaoCompleteData = {
-  avaliacao_id?: string;
-  usuario_id?: string;
-  usuario_nome?: string;
-  usuario_email?: string;
-  usuario_data_criacao?: Date;
-  destino_id?: string;
-  destino_nome?: string;
-  destino_pais?: string;
-  destino_descricao?: string;
+export interface AvaliacaoCompleteData {
+  avaliacao_id: string;
+  usuario_id: string;
+  usuario_nome: string;
+  usuario_email: string;
+  usuario_data_criacao: string;
+  destino_id: string;
+  destino_nome: string;
+  destino_pais: string;
+  destino_descricao: string;
   nota: number;
   comentario: string;
   data_avaliacao: Date;
@@ -26,15 +26,15 @@ export interface AvaliacaoCompleteDataResponse {
   completeRatingsList: AvaliacaoCompleteData[];
 }
 
-export type Destino = {
+export interface DestinoData {
   id: string;
   nome: string;
   pais: string;
   descricao: string;
-  imagem: string;
+  imagem: Buffer;
 };
 
-export type Usuario = {
+export interface Usuario {
   id: string;
   nome: string;
   email: string;
@@ -42,9 +42,14 @@ export type Usuario = {
   data_criacao: Date;
 };
 
-export type PacoteTuristico = {
-  id: string;
-  nome: string;
-  preco_base: number;
-  destino: Destino;
+export interface UsuarioResponse {
+  usersList: Usuario[];
 };
+
+export interface Pacote {
+  id?: string; // UUID
+  destino_id?: string; // UUID
+  nome: string;
+  descricao: string;
+  preco_base: number;
+}

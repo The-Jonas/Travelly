@@ -12,7 +12,6 @@ import {
   faPlane,
   faCalendar,
   faChartSimple,
-  faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import axios from "axios";
@@ -57,16 +56,7 @@ export default function ListaAvaliacoes() {
           height: "50vh",
         }}
       >
-        <h2>
-          <FontAwesomeIcon
-            icon={faSpinner}
-            spin
-            style={{ marginRight: "10px", color: "#1aa", fontSize: "1rem" }}
-          />
-          <p style={{ fontSize: "1rem", fontWeight: "bold", color: "#555" }}>
-            Carregando avaliações...
-          </p>
-        </h2>
+        <span aria-busy> Carregando avaliações...  </span>
       </div>
     );
   }
