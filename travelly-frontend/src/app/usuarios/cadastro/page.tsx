@@ -2,9 +2,8 @@
 import Link from 'next/link';
 import styles from '../../../styles/Cadastro.module.css';
 import { useState } from "react";
-
-const SERVER = "http://localhost:8664";
-const USERS_PATH = "/api/usuario/create";
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 export default function FormUsuarios() {
   const [nome, setNome] = useState<string>('');
@@ -15,7 +14,9 @@ export default function FormUsuarios() {
   const [emailErro, setEmailErro] = useState<string | null>(null);
   const [senhaErro, setSenhaErro] = useState<string | null>(null);
 
-  const handleSubmit = async (event: React.FormEvent) => {
+  const router = useRouter();
+
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
     let formValido = true;
@@ -48,26 +49,17 @@ export default function FormUsuarios() {
     }
 
     if (formValido) {
-      try {
-        const apiUrl = `${SERVER}${USERS_PATH}`;
-
-        const response = await fetch(apiUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({nome, email, senha})
+      axios.post<{ nome: string, email: string, senha: string }, void>(`http://localhost:8664/api/usuario/create`, {
+        nome,
+        email,
+        senha
+      })
+        .then(() => {
+          router.push("/usuarios/login");
+        })
+        .catch(() => {
+          setEmailErro("Email inválido!");
         });
-
-        if (response.ok) {
-          const data = await response.json();
-        } else {
-          throw new Error();
-        }
-
-      } catch (error) {
-        console.error("Erro ao criar usuario:", error);
-      }
     }
   }
 
