@@ -10,6 +10,7 @@ export default function InfoAvaliacao() {
     id: '1231-238384-3903783-29090',
     nota: 3,
     data_avaliacao: new Date(),
+    comentario: "Incrível",
     destino: {
       id: "112-111-11231-50",
       nome: "Xique Xique",

@@ -3,6 +3,7 @@ export type Avaliacao = {
   usuario: Usuario;
   destino: Destino; 
   nota: number;
+  comentario: string;
   data_avaliacao: Date;
 }
 
