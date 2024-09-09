@@ -4,6 +4,7 @@ import { DestinoController } from "./controllers/DestinoController";
 import { AvaliacaoController } from "./controllers/AvaliacaoController";
 import { ViewsController } from "./controllers/ViewsController";
 import multer from "multer";
+import { PacoteController } from "./controllers/PacotesController";
 
 const router = Router();
 
@@ -60,5 +61,8 @@ router.delete("/avaliacao/delete", AvaliacaoController.deleteAvaliacao);
 
 //! rotas para views
 router.get("/views/get-ratings-info", ViewsController.getRatingsInfo);
+
+//! rotas para pacotes_turisticos
+router.get("/views/get-destiny-packs/:id", PacoteController.getPackageInfo);
 
 export { router };
