@@ -48,15 +48,15 @@
   - [x] Implementar funções de CRUD para um conjunto de no mínimo 3 tabelas com relacionamento entre elas.
   - [x] Testar as funções para garantir o funcionamento correto.
 
-- [ ] **Utilização de View**
+- [x] **Utilização de View**
 
-  - [ ] Criar pelo menos uma view.
-  - [ ] Garantir que a view tenha uma complexidade adequada e documentar sua função.
+  - [x] Criar pelo menos uma view.
+  - [x] Garantir que a view tenha uma complexidade adequada e documentar sua função.
 
-- [ ] **Utilização de Procedure**
+- [x] **Utilização de Procedure**
 
-  - [ ] Criar pelo menos uma procedure com comandos condicionais.
-  - [ ] Documentar a complexidade e a lógica da procedure.
+  - [x] Criar pelo menos uma procedure com comandos condicionais.
+  - [x] Documentar a complexidade e a lógica da procedure.
 
 - [ ] **Inserção de Dado Binário**
   - [x] Adicionar um dado binário no banco de dados (ex: foto, arquivo PDF).
