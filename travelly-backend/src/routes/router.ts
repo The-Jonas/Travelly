@@ -2,6 +2,7 @@ import { Router } from "express";
 import { UsuarioController } from "./controllers/UsuarioController";
 import { DestinoController } from "./controllers/DestinoController";
 import { AvaliacaoController } from "./controllers/AvaliacaoController";
+import { ViewsController } from "./controllers/ViewsController";
 import multer from "multer";
 
 const router = Router();
@@ -56,5 +57,8 @@ router.get("/avaliacao/get/:id", AvaliacaoController.getAvaliacao);
 router.get("/avaliacao/getAll", AvaliacaoController.getAllAvaliacoes);
 router.patch("/avaliacao/update", AvaliacaoController.updateAvaliacao);
 router.delete("/avaliacao/delete", AvaliacaoController.deleteAvaliacao);
+
+//! rotas para views
+router.get("/views/get-ratings-info", ViewsController.getRatingsInfo);
 
 export { router };
