@@ -1,0 +1,76 @@
+  .header {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  /* -------------------------------------------------------------------*/
+  .btnPrimary {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+
+  /* Tema claro */
+  @media (prefers-color-scheme: light) {
+    .btnPrimary {
+      background-color: #007BFF; /* Cor do botão para o tema claro */
+      color: white; /* Texto branco */
+    }
+  }
+
+  /* Tema escuro */
+  @media (prefers-color-scheme: dark) {
+    .btnPrimary {
+      background-color: #1E90FF; /* Cor do botão para o tema escuro */
+      color: black; /* Texto preto */
+    }
+  }
+  /*-------------------------------------------------------------------*/
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+  }
+  
+  .featureItem {
+    max-width: 300px;
+  }
+  
+  .callToAction {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .footer p {
+    color: black;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .imageSection {
+    background-image: url('/images/paisagem.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    margin: 2rem 0;
+    border-radius: 8px;
+  }

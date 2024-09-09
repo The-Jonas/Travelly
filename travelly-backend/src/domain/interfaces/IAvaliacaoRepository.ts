@@ -2,7 +2,7 @@ export interface Avaliacao {
   id?: string;
   usuario_id?: string;
   destino_id?: string;
-  nota: Number;
+  nota: number;
   comentario: string;
   data_avaliacao?: Date;
 }
