@@ -2,12 +2,40 @@
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import styles from './CadastroAvaliacao.module.css'; // Importação do CSS
 
 interface Destino {
   id: string;
   nome: string;
   pais: string;
+  imagem: string; // Campo para armazenar a imagem em base64
 }
+
+
+const InteractiveStarRating = ({ rating, onRatingChange }: { rating: number, onRatingChange: (star: number) => void }) => {
+  const [hover, setHover] = useState<number | null>(null);
+
+  return (
+    <div className={styles.starRating}>
+      {[1, 2, 3, 4, 5].map((star) => (
+        <span
+          key={star}
+          onClick={() => onRatingChange(star)}
+          onMouseEnter={() => setHover(star)}
+          onMouseLeave={() => setHover(null)}
+          style={{ cursor: "pointer" }}
+        >
+          <FontAwesomeIcon 
+            icon={faStar} 
+            color={(hover !== null ? star <= hover : star <= rating) ? "#FFD43B" : "#e4e5e9"}
+          />
+        </span>
+      ))}
+    </div>
+  );
+};
 
 export default function CadastroAvaliacao() {
   const [nota, setNota] = useState<number>(0);
@@ -16,7 +44,9 @@ export default function CadastroAvaliacao() {
   const router = useRouter();
   const params = useParams();
   const destino_id = params.destinoId;
-  const usuario_id = "13cadb23-8f15-4bba-97ee-29464b1190c8"
+
+  const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+  const usuario_id = usuario.id;
 
   useEffect(() => {
     // Buscar os detalhes do destino com o ID da URL
@@ -29,18 +59,10 @@ export default function CadastroAvaliacao() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    const novaAvaliacao = {
-      usuario_id,
-      destino_id,
-      nota,
-      comentario,
-    };
-
     axios
-      .post("http://localhost:8664/api/avaliacao/create", novaAvaliacao)
+      .post("http://localhost:8664/api/avaliacao/create", { usuario_id, destino_id, nota, comentario })
       .then(() => {
-        console.log("enviado", novaAvaliacao)
-        router.push("/avaliacoes");  // Redireciona para a lista de avaliações
+        router.push("/avaliacoes");
       })
       .catch((err) => console.error(err));
   };
@@ -50,28 +72,35 @@ export default function CadastroAvaliacao() {
   }
 
   return (
-    <main className="container">
-      <h2>Avaliar Destino: {destino.nome}, {destino.pais}</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nota:</label>
-          <input
-            type="number"
-            value={nota}
-            min={1}
-            max={5}
-            onChange={(e) => setNota(Number(e.target.value))}
-          />
+    <main className={styles.container}>
+      <h2 className={styles.title}>Avaliar Destino: {destino.nome}, {destino.pais}</h2>
+      <div className={styles.formContainer}>
+        <div className={styles.imageSection}>
+          {destino.imagem && (
+            <img
+              src={`data:image/jpg;base64,${Buffer.from(destino.imagem).toString("base64")}`}
+              alt={destino.nome}
+              className={styles.destinoImagem}
+            />
+          )}
         </div>
-        <div>
-          <label>Comentário:</label>
-          <textarea
-            value={comentario}
-            onChange={(e) => setComentario(e.target.value)}
-          />
+        <div className={styles.formSection}>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.formGroup}>
+                <label>Nota:</label>
+                <InteractiveStarRating rating={nota} onRatingChange={setNota} />
+            </div>
+            <div className={styles.formGroup}>
+              <label>Comentário:</label>
+              <textarea
+                value={comentario}
+                onChange={(e) => setComentario(e.target.value)}
+              />
+            </div>
+            <button type="submit">Enviar Avaliação</button>
+          </form>
         </div>
-        <button type="submit">Enviar Avaliação</button>
-      </form>
+      </div>
     </main>
   );
 }

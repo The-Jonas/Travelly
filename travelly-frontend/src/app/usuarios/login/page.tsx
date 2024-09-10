@@ -25,14 +25,17 @@ export default function FormUsuarios() {
           if (usuario.email == email) {
             if (usuario.senha == senha) {
               usuarioEncontrado = true;
+
+              localStorage.setItem('usuario', JSON.stringify({ email: usuario.email, id: usuario.id }));
+            } else {
+              setSenhaErro('Senha inválida');
             }
-            setSenhaErro('Senha inválida');
             return;
           }
         });
 
         if (usuarioEncontrado) {
-          router.push("/avaliacoes");
+          router.push("/destino/lista");
           return;
         }
         setEmailErro("Usuário não encontrado!");
