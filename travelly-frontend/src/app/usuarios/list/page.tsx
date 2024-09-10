@@ -3,6 +3,9 @@ import { MdEdit } from '@react-icons/all-files/md/MdEdit';
 import { MdDelete } from '@react-icons/all-files/md/MdDelete';
 import { useEffect, useState } from 'react';
 
+const SERVER = "http://localhost:8664";
+const USERS_PATH = "/api/usuario/getAll";
+
 type Usuario = {
   id: number;
   nome: string;
@@ -16,11 +19,26 @@ export default function ListaUsuarios() {
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
 
   useEffect(() => {
-    setUsuarios([
-      { id: 1, nome: 'Paulo Maciel', email: 'paulomacieltorresfilho@gmail.com', dataCriacao: new Date() },
-      { id: 2, nome: 'Teste teste', email: 'teste@gmail.com', dataCriacao: new Date() },
-      { id: 3, nome: 'Masjkn Kknels', email: 'alksn@gmail.com', dataCriacao: new Date() }
-    ])
+    const fetchUsuarios = async () => {
+      try {
+        const apiUrl = `${SERVER}${USERS_PATH}`;
+
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        const usuarios = data.usersList.map((user: { data_criacao: string | number | Date; }) => ({
+          ...user,
+          dataCriacao: new Date(user.data_criacao),
+        }));
+  
+
+        setUsuarios(usuarios);
+      } catch (error) {
+        console.error("Erro ao recuperar lista de usuarios:", error);
+      }
+    };
+
+    fetchUsuarios();
   }, [])
 
   return (
