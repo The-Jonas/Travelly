@@ -89,3 +89,28 @@ Consultas básicas de avaliações, usuários e destinos:
   - react-router-dom
   - Bootstrap
   - next.js
+## **Como rodar o projeto**
+
+1. **Subir o banco de dados:**
+   - Após clonar o projeto, navegue até a pasta principal e execute o seguinte comando para subir o banco de dados:
+     ```bash
+     docker-compose up -d
+     ```
+
+2. **Subir o backend:**
+   - Navegue até a pasta `travelly-backend`, instale os pacotes necessários e rode o servidor:
+     ```bash
+     cd travelly-backend
+     npm i
+     npm run dev
+     ```
+
+3. **Subir o frontend:**
+   - Navegue até a pasta `travelly-frontend`, instale os pacotes necessários e rode o servidor:
+     ```bash
+     cd travelly-frontend
+     npm i
+     npm run dev
+     ```
+
+O projeto estará rodando localmente com o backend e o frontend conectados ao banco de dados.
